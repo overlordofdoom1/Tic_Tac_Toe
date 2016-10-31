@@ -13,7 +13,7 @@ int main()
 	std::cout << "Welcome to Tic Tac Toe";
 	board.displayBoard();
 
-	for (int x = moveCount; moveCount < 6; moveCount++)
+	for (int moveCount = 0; moveCount < 6; moveCount++)
 	{
 		if (p1.move(board) == true) { break; } // Player X
 
