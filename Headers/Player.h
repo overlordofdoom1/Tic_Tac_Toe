@@ -8,8 +8,7 @@
 class Player {
 
 private:
-
-	int in, row, col;
+	
 	std::string peice, player;
 
 public:
