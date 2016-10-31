@@ -13,11 +13,11 @@ int main()
 	std::cout << "Welcome to Tic Tac Toe";
 	board.displayBoard();
 
-	for (int x = 0; x < 6; x++)
+	for (int x = moveCount; moveCount < 6; moveCount++)
 	{
 		if (p1.move(board) == 1) { break; } // Player X
 
-		if (x == 4) // If there is no winner up until the end of the game; end game
+		if (moveCount == 4) // If there is no winner up until the end of the game; end game
 		{
 			std::cout << "\n\n\nThe match was a draw\n";
 			break;
