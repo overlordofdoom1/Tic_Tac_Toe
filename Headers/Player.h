@@ -15,8 +15,8 @@ private:
 public:
 
 	Player(std::string x);       // Sets up piece, depending on parameter
-	int move(Board& board);     // Gets input and makes move
-	bool winner(Board& board); // Checks for winner
+	int move(Board& board);     // Gets input and makes move, pass by refrence (address)
+	bool winner(Board& board); // Checks for winner, pass by refrence (address)
 
 };
 
