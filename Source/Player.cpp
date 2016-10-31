@@ -8,14 +8,16 @@ Player::Player(std::string x)
 
 bool Player::move(Board& board)
 {
+	int in = 0, row, col;
+
 	do {
-		
-		do { // Only accpets values between 1-9
+
+		while (!(in > 0 && in < 9))
+		{
 
 			std::cout << "\nPlayer " << player << " enter position: ";
 			std::cin >> in;
-
-		} while (in < 0 && in > 9);
+		}
 
 		row = in > 3 && in < 7 ? 3 : 1;                    // Sets row
 		row = in > 6 && in < 10 ? 5 : row;
