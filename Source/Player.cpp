@@ -9,7 +9,6 @@ Player::Player(std::string x)
 bool Player::move(Board& board)
 {
 	do {
-
 		do { // Only accpets values between 1-9
 
 			std::cout << "\nPlayer " << player << " enter position: ";
