@@ -15,7 +15,7 @@ int main()
 
 	for (int x = moveCount; moveCount < 6; moveCount++)
 	{
-		if (p1.move(board) == 1) { break; } // Player X
+		if (p1.move(board) == true) { break; } // Player X
 
 		if (moveCount == 4) // If there is no winner up until the end of the game; end game
 		{
@@ -23,7 +23,7 @@ int main()
 			break;
 		}
 
-		if (p2.move(board) == 1) { break; } // Player O
+		if (p2.move(board) == true) { break; } // Player O
 	}
 }
 
