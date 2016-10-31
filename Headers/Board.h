@@ -1,5 +1,5 @@
-#ifndef BOARD_H
-#define BOARD_H
+#ifndef BOARD_H // Create gaurd so that Board.h isn't
+#define BOARD_H // included more than once
 
 #include <string>
 #include <iostream>
