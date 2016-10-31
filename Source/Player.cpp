@@ -14,7 +14,6 @@ bool Player::move(Board& board)
 
 		while (!(in > 0 && in < 9))
 		{
-
 			std::cout << "\nPlayer " << player << " enter position: ";
 			std::cin >> in;
 		}
