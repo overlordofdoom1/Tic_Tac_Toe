@@ -8,26 +8,23 @@ Player::Player(std::string x)
 
 int Player::move(Board& board)
 {
-beginning:
+	do {
 
-	while (!(in > 0 && in < 10)) // Only accpets values between 1-9
-	{
-		std::cout << "\nPlayer " << player << " enter position: ";
-		std::cin >> in;
-	}
+		while (!(in > 0 && in < 10)) // Only accpets values between 1-9
+		{
+			std::cout << "\nPlayer " << player << " enter position: ";
+			std::cin >> in;
+		}
 
-	row = in > 3 && in < 7 ? 3 : 1;                    // Sets row
-	row = in > 6 && in < 10 ? 5 : row;
+		row = in > 3 && in < 7 ? 3 : 1;                    // Sets row
+		row = in > 6 && in < 10 ? 5 : row;
 
-	col = in == 2 || in == 5 || in == 8 ? 1 : 0;       // Sets Column 
-	col = in == 3 || in == 6 || in == 9 ? 2 : col;
+		col = in == 2 || in == 5 || in == 8 ? 1 : 0;       // Sets Column 
+		col = in == 3 || in == 6 || in == 9 ? 2 : col;
 
-	in = 0; // Sets back to 0 so the while expression will work again
+		in = 0; // Sets back to 0 so the while expression will work again
 
-	if (board.board[row][col] == "| X " || board.board[row][col] == "| O ")
-	{ // If space has already been taken, ask for input again
-		goto beginning;
-	}
+	} while(board.board[row][col] == "| X " || board.board[row][col] == "| O ");
 
 
 	board.board[row][col] = peice;  // Convert position from board into the peice
