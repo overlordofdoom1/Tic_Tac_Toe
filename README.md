@@ -1,5 +1,5 @@
 # Tic_Tac_Toe
-Tic Tac Toe using C++14
+Tic Tac Toe using C++14 ([main] TicTacToe.cpp)
 
 Made by overlordofdoom1 [TCG]
 
