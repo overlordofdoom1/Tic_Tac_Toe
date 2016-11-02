@@ -33,7 +33,7 @@ bool Player::move(Board& board)
 	return winner(board); // Checks if this player has won
 }
 
-bool Player::winner(Board& board)
+bool Player::winner(Board& board) const
 {
 	for (int x = 1; x < 6; x += 2)
 	{
