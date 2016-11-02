@@ -1,5 +1,5 @@
 #ifndef PLAYER_H  // Create guard so that Player.h isn't
-#define PLAYER_H  // included more than once
+#define PLAYER_H  // included more than once in series
 
 #include <iostream>
 #include <string>
