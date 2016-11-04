@@ -10,13 +10,12 @@ class Player {
 private:
 	
 	std::string peice, player;
+	bool winner(Board& board) const; // Checks for winner, pass by refrence (address)
 
 public:
 
 	Player(std::string x);       // Sets up piece, depending on parameter
 	bool move(Board& board);     // Gets input and makes move, pass by refrence (address)
-	bool winner(Board& board) const; // Checks for winner, pass by refrence (address)
-
 };
 
 #endif // For def: PLAYER_H
