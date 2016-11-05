@@ -1,8 +1,7 @@
 #include "Player.h"
 
-Player::Player(std::string x)
+Player::Player(std::string x) : player(x)
 {
-	player = x;
 	peice = player == "X" ? "| X " : "| O ";
 }
 
