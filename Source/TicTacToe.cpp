@@ -5,16 +5,16 @@
 
 #include "Player.h"
 
-int main() {
-	
+int main() 
+{
 	Board board;
 	Player p1("X"), p2("O");
 
 	std::cout << "Welcome to Tic Tac Toe";
 	board.displayBoard();
 
-	for (int moveCount = 0; moveCount < 6; moveCount++) {
-		
+	for (int moveCount = 0; moveCount < 6; moveCount++) 
+	{
 		if (p1.move(board) == true) { break; } // Player X
 
 		if (moveCount == 4) // If there is no winner up until the end of the game; end game
