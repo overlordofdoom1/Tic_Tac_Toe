@@ -1,9 +1,6 @@
 #include "Player.h"
 
-Player::Player(std::string x) : player(x)
-{
-	peice = player == "X" ? "| X " : "| O ";
-}
+Player::Player(std::string x) : player(x), peice(player == "X" ? "| X " : "| O ") {}
 
 bool Player::move(Board& board)
 {
