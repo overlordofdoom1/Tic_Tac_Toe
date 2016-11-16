@@ -1,9 +1,12 @@
 #include "Player.h"
 
-Player::Player(std::string x) : player(x), peice(player == "X" ? "| X " : "| O ") {}
+Player::Player(std::string x) : player(x) {
 
-bool Player::move(Board& board)
-{
+	peice = player == "X" ? "| X " : "| O ";
+}
+
+bool Player::move(Board& board) {
+	
 	int in = 0, row, col;
 
 	do {
@@ -29,10 +32,10 @@ bool Player::move(Board& board)
 	return winner(board); // Checks if this player has won
 }
 
-bool Player::winner(Board& board) const
-{
-	for (int x = 1; x < 6; x += 2)
-	{
+bool Player::winner(Board& board) const {
+	
+	for (int x = 1; x < 6; x += 2) {
+		
 		if (board.board[1][x == 1 ? 0 : x - 2] == peice && board.board[3][x == 1 ? 0 : x - 2] == peice && board.board[5][x == 1 ? 0 : x - 2] == peice || // Horizontal
 			board.board[x][0] == peice && board.board[x][1] == peice && board.board[x][2] == peice || // Verical
 			board.board[1][x - 1] == peice && board.board[3][1] == peice && board.board[5][x == 1 ? 2 : 0] == peice) // Diagonal
