@@ -10,7 +10,7 @@ int main()
 	Board board;
 	Player p1("X"), p2("O");
 
-	std::cout << "Welcome to Tic Tac Toe";
+	std::cout << "Welcome to Tic Tac Toe\n\n";
 	board.displayBoard();
 
 	for (int moveCount = 0; moveCount < 6; moveCount++) 
